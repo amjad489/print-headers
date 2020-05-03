@@ -3,7 +3,7 @@ from flask import request, Flask, jsonify
 app = Flask(__name__)
 
 
-@app.route('/')
+@app.route('/', methods=["GET"])
 def index():
     a = {}
     for i in request.headers:
